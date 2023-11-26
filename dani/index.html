@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Berkah Rent</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <link rel="manifest" href="manifest.json" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:600,700" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  </head>
+  <body class="align-items-start pt-0 h-screen">
+    <main
+      role="main"
+      class="container-fluid col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 pt-0 pl-0 pr-0 position-relative">
+      <section class="container py-3 h-screen bg-white">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="text-info text-center bold">Berkah Rent</h1>
+            <hr>
+          </div>
+          <div class="col-md-12 mb-3">
+            <div class="card bg-white rounded-5 mb-3">
+              <div class="card-body p-2">
+                <h6 class="my-2">Tambah Katalog</h6>
+                <div class="row">
+                  <div class="col-12">
+                    <input type="text" class="form-control mb-2" id="inputCarName" placeholder="Nama Mobil">
+                  </div>
+                  <div class="col-12">
+                    <input type="number" class="form-control mb-2" id="inputCarPrice" placeholder="Tarif/hari">
+                  </div>
+                </div>
+                <button id="addData" class="btn btn-outline-primary btn-sm btn-block">
+                  Tambah
+                </button>
+              </div>
+            </div>
+            <h4 class="text-center">Katalog</h4>
+            <table class="table" id="carTable">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Tarif/hari</th>
+                  <th scope="col">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-md-6 mb-3">
+            <button type="button" class="btn btn-outline-success btn-block" data-toggle="modal" data-target="#modalTransaksi">
+              Buat Transaksi
+            </button>
+          </div>
+          <div class="col-md-6">
+            <button type="button" class="btn btn-outline-info btn-block" data-toggle="modal" data-target="#modalRiwayat">
+              Riwayat Transaksi
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    
+    <div class="modal fade" id="modalTransaksi" tabindex="-1" aria-labelledby="modalTransaksiLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title fs-5" id="modalTransaksiLabel">Transaksi Baru</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form action="#" id="transactionForm">
+              <div class="mb-3">
+                <label for="customerName" class="form-label">Nama Pelanggan</label>
+                <input type="text" class="form-control" id="customerName" required>
+              </div>
+              <div class="mb-3">
+                <label for="selectCar" class="form-label">Pilih Mobil</label>
+                <select class="form-control form-select" id="selectCar" aria-label="Pilih Mobil">
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="duration" class="form-label">Durasi Sewa (hari)</label>
+                <input type="number" class="form-control" id="duration" required>
+              </div>
+              <div class="mb-3">
+                <label for="totalPrice" class="form-label">Total Bayar</label>
+                <input type="number" class="form-control" id="totalPrice" readonly required>
+              </div>
+              <button class="btn btn-primary btn-sm float-end">Simpan</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="modal fade" id="modalRiwayat" tabindex="-1" aria-labelledby="modalRiwayatLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title fs-5" id="modalRiwayatLabel">Riwayat Transaksi</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="table-responsive">
+              <table class="table" id="transactionTable">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Mobil</th>
+                    <th scope="col">Durasi Sewa</th>
+                    <th scope="col">Total Harga</th>
+                  </tr>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="assets/js/jquery-3.3.1.slim.min.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/register.js"></script>
+  </body>
+</html>

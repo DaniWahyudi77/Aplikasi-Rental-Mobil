@@ -1,0 +1,25 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.bottom-bar {
+    position: absolute;
+    width: 100%;
+    background: white;
+    bottom: 0;
+}
+
+.h-screen {
+    min-height: 100vh;
+    height: auto;
+}
